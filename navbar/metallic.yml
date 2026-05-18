@@ -7,29 +7,29 @@ routes:
     tap_action: null
     url: /lovelace/home
   - icon: mdi:toolbox-outline
+    label: Tools
+    icon_selected: mdi:toolbox
     tap_action:
       action: open-popup
-    icon_selected: mdi:toolbox
     popup:
       - icon: mdi:file-document-edit
+        label: File Editor
         tap_action: null
         url: /lovelace/file-editor
-        label: File Editor
       - icon: selfhst:file-explorer
-        url: /lovelace/filebrowser
         label: File Browser
+        url: /lovelace/filebrowser
       - icon: mdi:console
+        label: Terminal
         tap_action: null
         url: /lovelace/terminal
         icon_selected: ""
-        label: Terminal
       - icon: mdi:robot-angry
-        url: /lovelace/ip-scanner
         label: IP Scanner
+        url: /lovelace/ip-scanner
       - icon: mdi:database-alert
-        url: /lovelace/sqlite
         label: Sqlite Editor
-    label: Tools
+        url: /lovelace/sqlite
   - icon: mdi:lightbulb
     label: Geräte
     tap_action:
@@ -72,12 +72,12 @@ routes:
         label: Streaming
         tap_action:
           action: navigate
-          navigation_path: 
+          navigation_path: https://box.tecmek.at
         url: /lovelace/streaming
       - icon: mdi:gamepad-variant
         label: Gaming
-        url: /lovelace/gaming
         tap_action: null
+        url: /lovelace/gaming
   - icon: mdi:chair-rolling
     label: Office
     tap_action:
@@ -85,8 +85,8 @@ routes:
     popup:
       - icon: mdi:format-list-checkbox
         label: To-Do List
-        url: /lovelace/todo
         tap_action: null
+        url: /lovelace/todo
       - icon: mdi:calendar
         label: Kalender
         tap_action: null
@@ -114,8 +114,8 @@ routes:
         url: /lovelace/standorte
       - icon: mdi:timer-sand-full
         label: TimeMachine
-        url: /lovelace/time-machine-backup
         tap_action: null
+        url: /lovelace/time-machine-backup
       - icon: mdi:radiology-box
         label: Logviewer
         tap_action: null
@@ -154,13 +154,13 @@ routes:
       action: open-popup
     popup:
       - icon: mdi:power
+        label: Restart
         tap_action:
           action: call-service
           service: homeassistant.restart
           service_data: {}
           confirmation:
             text: Are you sure you want to restart Home Assistant?
-        label: Restart
       - icon: mdi:account
         label: User
         tap_action: null
@@ -182,81 +182,81 @@ routes:
         tap_action:
           action: open-edit-mode
         url: null
-styles: |2-
-        ha-card {
-      position: relative !important;
+styles: |-
+  ha-card {
+    position: relative !important;
 
-      background:
-        linear-gradient(
-          to bottom,
-          rgba(250,250,245,0.96) 0%,
-          rgba(224,224,218,0.90) 10%,
-          rgba(182,182,176,0.84) 30%,
-          rgba(118,118,114,0.80) 58%,
-          rgba(70,70,67,0.78) 80%,
-          rgba(42,42,40,0.74) 100%
-        ),
-        repeating-linear-gradient(
-          90deg,
-          rgba(255,255,255,0.018) 0px,
-          rgba(255,255,255,0.018) 2px,
-          rgba(0,0,0,0.012) 2px,
-          rgba(0,0,0,0.012) 4px
-        ),
-        linear-gradient(
-          98deg,
-          transparent 0%,
-          transparent 9%,
-          rgba(255,255,255,0.030) 9.4%,
-          transparent 10.1%,
-          transparent 27%,
-          rgba(0,0,0,0.040) 27.6%,
-          transparent 28.1%,
-          transparent 43%,
-          rgba(255,255,255,0.022) 43.4%,
-          transparent 43.9%,
-          transparent 100%
-        ),
-        radial-gradient(circle at 23% 58%, rgba(0,0,0,0.10) 0px, rgba(255,255,255,0.020) 2px, transparent 4px),
-        radial-gradient(circle at 67% 40%, rgba(0,0,0,0.08) 0px, rgba(255,255,255,0.018) 2px, transparent 4px),
-        radial-gradient(circle at 81% 70%, rgba(0,0,0,0.06) 0px, rgba(255,255,255,0.014) 1.8px, transparent 3.8px),
-        linear-gradient(
-          to bottom,
-          rgba(90,72,52,0.035) 0%,
-          rgba(90,72,52,0.015) 20%,
-          transparent 22%,
-          transparent 100%
-        ) !important;
+    background:
+      linear-gradient(
+        to bottom,
+        rgba(250,250,245,0.96) 0%,
+        rgba(224,224,218,0.90) 10%,
+        rgba(182,182,176,0.84) 30%,
+        rgba(118,118,114,0.80) 58%,
+        rgba(70,70,67,0.78) 80%,
+        rgba(42,42,40,0.74) 100%
+      ),
+      repeating-linear-gradient(
+        90deg,
+        rgba(255,255,255,0.018) 0px,
+        rgba(255,255,255,0.018) 2px,
+        rgba(0,0,0,0.012) 2px,
+        rgba(0,0,0,0.012) 4px
+      ),
+      linear-gradient(
+        98deg,
+        transparent 0%,
+        transparent 9%,
+        rgba(255,255,255,0.030) 9.4%,
+        transparent 10.1%,
+        transparent 27%,
+        rgba(0,0,0,0.040) 27.6%,
+        transparent 28.1%,
+        transparent 43%,
+        rgba(255,255,255,0.022) 43.4%,
+        transparent 43.9%,
+        transparent 100%
+      ),
+      radial-gradient(circle at 23% 58%, rgba(0,0,0,0.10) 0px, rgba(255,255,255,0.020) 2px, transparent 4px),
+      radial-gradient(circle at 67% 40%, rgba(0,0,0,0.08) 0px, rgba(255,255,255,0.018) 2px, transparent 4px),
+      radial-gradient(circle at 81% 70%, rgba(0,0,0,0.06) 0px, rgba(255,255,255,0.014) 1.8px, transparent 3.8px),
+      linear-gradient(
+        to bottom,
+        rgba(90,72,52,0.035) 0%,
+        rgba(90,72,52,0.015) 20%,
+        transparent 22%,
+        transparent 100%
+      ) !important;
 
-      backdrop-filter: blur(18px) saturate(135%);
-      -webkit-backdrop-filter: blur(18px) saturate(135%);
+    backdrop-filter: blur(18px) saturate(135%);
+    -webkit-backdrop-filter: blur(18px) saturate(135%);
 
-      border-radius: 28px !important;
+    border-radius: 28px !important;
 
-      border-top: 1px solid rgba(255,255,255,0.86) !important;
-      border-left: 1px solid rgba(255,255,255,0.28) !important;
-      border-right: 1px solid rgba(0,0,0,0.26) !important;
-      border-bottom: 1px solid rgba(0,0,0,0.52) !important;
+    border-top: 1px solid rgba(255,255,255,0.86) !important;
+    border-left: 1px solid rgba(255,255,255,0.28) !important;
+    border-right: 1px solid rgba(0,0,0,0.26) !important;
+    border-bottom: 1px solid rgba(0,0,0,0.52) !important;
 
-      box-shadow:
-        0 18px 28px rgba(0,0,0,0.34),
-        0 6px 10px rgba(0,0,0,0.22),
-        inset 0 2px 3px rgba(255,255,255,0.68),
-        inset 0 10px 15px rgba(255,255,255,0.05),
-        inset 0 -16px 24px rgba(0,0,0,0.24),
-        inset 14px 0 18px rgba(255,255,255,0.04),
-        inset -14px 0 18px rgba(0,0,0,0.08) !important;
+    box-shadow:
+      0 18px 28px rgba(0,0,0,0.34),
+      0 6px 10px rgba(0,0,0,0.22),
+      inset 0 2px 3px rgba(255,255,255,0.68),
+      inset 0 10px 15px rgba(255,255,255,0.05),
+      inset 0 -16px 24px rgba(0,0,0,0.24),
+      inset 14px 0 18px rgba(255,255,255,0.04),
+      inset -14px 0 18px rgba(0,0,0,0.08) !important;
 
-      overflow: visible !important;
-      padding: 14px 17px 16px 17px !important;
-      margin: 10px;
+    overflow: visible !important;
+    padding: 14px 17px 16px 17px !important;
+    margin: 10px;
 
-      --nav-icon-color: rgba(255,255,255,0.94);
-      --nav-hover-color: #ffffff;
-      --nav-active-icon-color: #fff7f7;
-      --nav-icon-size: 25px;
-      --nav-active-icon-size: 31px;
-    }
+    --nav-icon-color: rgba(255,255,255,0.94);
+    --nav-hover-color: #ffffff;
+    --nav-active-icon-color: #fff7f7;
+    --nav-icon-size: 25px;
+    --nav-active-icon-size: 31px;
+  }
 
   .navbar,
   .routes,
@@ -283,98 +283,95 @@ styles: |2-
     --mdc-icon-color: var(--nav-icon-color) !important;
 
     transition:
-      transform 0.24s cubic-bezier(.2,.8,.2,1),
-      box-shadow 0.24s cubic-bezier(.2,.8,.2,1),
-      background 0.24s cubic-bezier(.2,.8,.2,1),
-      filter 0.24s cubic-bezier(.2,.8,.2,1),
-      color 0.2s ease;
+      transform 0.20s cubic-bezier(.2,.8,.2,1),
+      box-shadow 0.20s cubic-bezier(.2,.8,.2,1),
+      background 0.20s cubic-bezier(.2,.8,.2,1),
+      filter 0.20s cubic-bezier(.2,.8,.2,1),
+      color 0.18s ease;
   }
 
   .route {
-      background: transparent !important;
-      box-shadow: none !important;
-      position: relative !important;
-      overflow: visible !important;
-      z-index: 1;
-    }
+    background: transparent !important;
+    box-shadow: none !important;
+    position: relative !important;
+    overflow: visible !important;
+    z-index: 1;
+  }
 
-      .routes > .route::before {
-      content: "";
-      position: absolute;
-      left: 50%;
-      top: 50%;
-      width: 72px;
-      height: 72px;
-      transform: translate(-50%, -50%);
-      border-radius: 19px;
+  .route::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 50%;
 
-      background:
-        radial-gradient(circle at 35% 22%, rgba(255,255,255,0.06) 0%, rgba(255,255,255,0.02) 18%, transparent 36%),
-        linear-gradient(
-          to bottom,
-          rgba(32,32,30,0.82) 0%,
-          rgba(54,54,51,0.54) 18%,
-          rgba(18,18,17,0.72) 56%,
-          rgba(8,8,8,0.82) 100%
-        ),
-        repeating-linear-gradient(
-          90deg,
-          rgba(255,255,255,0.010) 0px,
-          rgba(255,255,255,0.010) 2px,
-          rgba(0,0,0,0.010) 2px,
-          rgba(0,0,0,0.010) 4px
-        );
+    width: 64px;
+    height: 81px;
 
-      box-shadow:
-        inset 0 2px 3px rgba(255,255,255,0.10),
-        inset 0 10px 16px rgba(0,0,0,0.42),
-        inset 0 -2px 3px rgba(255,255,255,0.03),
-        inset 0 0 0 1px rgba(0,0,0,0.34),
-        0 2px 4px rgba(0,0,0,0.18);
+    transform: translate(-50%, -50%);
+    border-radius: 22px;
 
-      pointer-events: none;
-      z-index: 0;
-    }
+    background:
+      linear-gradient(
+        to bottom,
+        rgba(6,6,5,0.78) 0%,
+        rgba(24,24,22,0.70) 24%,
+        rgba(70,70,64,0.28) 48%,
+        rgba(8,8,7,0.72) 100%
+      );
 
-    .routes > .route::after {
-      content: "";
-      position: absolute;
-      left: 50%;
-      top: 50%;
-      width: 63px;
-      height: 63px;
-      transform: translate(-50%, -50%);
-      border-radius: 17px;
+    box-shadow:
+      inset 0 5px 10px rgba(0,0,0,0.72),
+      inset 0 -2px 4px rgba(255,255,255,0.08),
+      inset 0 0 0 1px rgba(0,0,0,0.62),
+      inset 0 0 0 2px rgba(255,255,255,0.035),
+      0 1px 1px rgba(255,255,255,0.08),
+      0 5px 8px rgba(0,0,0,0.20);
 
-      background:
-        radial-gradient(
-          ellipse at 50% 52%,
-          transparent 48%,
-          rgba(0,0,0,0.12) 72%,
-          rgba(255,255,255,0.025) 100%
-        );
+    pointer-events: none;
+    z-index: 1;
+  }
 
-      box-shadow:
-        inset 0 0 0 1px rgba(255,255,255,0.03),
-        inset 0 0 12px rgba(0,0,0,0.18);
+  .route::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 50%;
 
-      pointer-events: none;
-      z-index: 0;
-    }
+    width: 74px;
+    height: 76px;
 
-        .route .button {
+    transform: translate(-50%, -50%);
+    border-radius: 16px;
+
+    background:
+      radial-gradient(
+        ellipse at 50% 42%,
+        rgba(255,255,255,0.08) 0%,
+        transparent 34%,
+        rgba(0,0,0,0.20) 74%,
+        rgba(0,0,0,0.42) 100%
+      );
+
+    box-shadow:
+      inset 0 2px 4px rgba(255,255,255,0.06),
+      inset 0 -6px 10px rgba(0,0,0,0.48),
+      inset 0 0 0 1px rgba(255,255,255,0.025);
+
+    pointer-events: none;
+    z-index: 1;
+  }
+
+  .route .button {
     width: 58px !important;
     height: 58px !important;
-    position: relative !important;
-    z-index: 2;
-    filter: saturate(0.96) contrast(1.02) brightness(0.98);
+    min-width: 58px !important;
     min-height: 58px !important;
     max-width: 58px !important;
     max-height: 58px !important;
     aspect-ratio: 1 / 1 !important;
 
-    margin: 0 7px;
-    border-radius: 15px !important;
+    margin: 0 15px;
+    border-radius: 28px !important;
 
     display: flex;
     flex-direction: column;
@@ -383,6 +380,9 @@ styles: |2-
 
     overflow: visible !important;
     position: relative !important;
+    z-index: 2;
+
+    filter: saturate(0.96) contrast(1.02) brightness(0.98);
 
     background:
       radial-gradient(circle at 34% 18%, rgba(255,255,255,0.48) 0%, rgba(255,255,255,0.10) 16%, transparent 36%),
@@ -414,136 +414,126 @@ styles: |2-
       inset -4px 0 6px rgba(0,0,0,0.10) !important;
   }
 
-      .route .button::before {
-      content: "";
-      position: absolute;
-      top: 6px;
-      left: 8px;
-      right: 8px;
-      height: 20%;
-      border-radius: 12px;
+  .route .button::before {
+    content: "";
+    position: absolute;
+    top: 6px;
+    left: 8px;
+    right: 8px;
+    height: 20%;
+    border-radius: 12px;
 
-      background:
-        linear-gradient(
-          to bottom,
-          rgba(255,255,255,0.18) 0%,
-          rgba(255,255,255,0.06) 58%,
-          rgba(255,255,255,0.00) 100%
-        );
+    background:
+      linear-gradient(
+        to bottom,
+        rgba(255,255,255,0.18) 0%,
+        rgba(255,255,255,0.06) 58%,
+        rgba(255,255,255,0.00) 100%
+      );
 
-      pointer-events: none;
-      opacity: 0.48;
-      z-index: 1;
-    }
+    pointer-events: none;
+    opacity: 0.48;
+    z-index: 1;
+  }
 
-     .route .button::after {
-      content: "";
-      position: absolute;
-      inset: 0;
-      border-radius: 15px;
+  .route .button::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 28px;
 
-      background:
-        linear-gradient(
-          145deg,
-          rgba(255,255,255,0.030),
-          transparent 34%,
-          rgba(0,0,0,0.12)
-        ),
+    background:
+      linear-gradient(
+        145deg,
+        rgba(255,255,255,0.030),
+        transparent 34%,
+        rgba(0,0,0,0.12)
+      ),
+      repeating-linear-gradient(
+        113deg,
+        rgba(255,255,255,0.00) 0px,
+        rgba(255,255,255,0.00) 10px,
+        rgba(255,255,255,0.022) 11px,
+        rgba(255,255,255,0.00) 12px,
+        rgba(255,255,255,0.00) 19px
+      ),
+      linear-gradient(
+        101deg,
+        transparent 0%,
+        transparent 29%,
+        rgba(255,255,255,0.018) 29.6%,
+        transparent 30.2%,
+        transparent 61%,
+        rgba(70,70,66,0.055) 61.6%,
+        transparent 62.1%,
+        transparent 100%
+      ),
+      radial-gradient(
+        ellipse at 34% 28%,
+        rgba(255,255,255,0.070) 0%,
+        rgba(255,255,255,0.028) 18%,
+        transparent 38%
+      ),
+      radial-gradient(
+        ellipse at 63% 36%,
+        rgba(255,255,255,0.050) 0%,
+        rgba(255,255,255,0.016) 16%,
+        transparent 34%
+      ),
+      radial-gradient(
+        ellipse at 47% 68%,
+        rgba(0,0,0,0.055) 0%,
+        rgba(0,0,0,0.022) 18%,
+        transparent 34%
+      ),
+      radial-gradient(
+        ellipse at 72% 74%,
+        rgba(0,0,0,0.045) 0%,
+        rgba(0,0,0,0.016) 14%,
+        transparent 28%
+      ),
+      radial-gradient(
+        ellipse at 42% 46%,
+        rgba(255,255,255,0.040) 0%,
+        rgba(255,255,255,0.010) 10%,
+        transparent 24%
+      ),
+      radial-gradient(
+        ellipse at 58% 52%,
+        rgba(90,90,86,0.030) 0%,
+        rgba(90,90,86,0.010) 12%,
+        transparent 24%
+      ),
+      radial-gradient(
+        circle at 72% 76%,
+        rgba(0,0,0,0.07) 0px,
+        rgba(255,255,255,0.010) 1.4px,
+        transparent 3px
+      ),
+      radial-gradient(
+        circle at 28% 62%,
+        rgba(0,0,0,0.05) 0px,
+        rgba(255,255,255,0.008) 1.2px,
+        transparent 2.8px
+      );
 
-        repeating-linear-gradient(
-          113deg,
-          rgba(255,255,255,0.00) 0px,
-          rgba(255,255,255,0.00) 10px,
-          rgba(255,255,255,0.022) 11px,
-          rgba(255,255,255,0.00) 12px,
-          rgba(255,255,255,0.00) 19px
-        ),
+    background-blend-mode:
+      normal,
+      normal,
+      normal,
+      screen,
+      screen,
+      multiply,
+      multiply,
+      screen,
+      multiply,
+      normal,
+      normal;
 
-        linear-gradient(
-          101deg,
-          transparent 0%,
-          transparent 29%,
-          rgba(255,255,255,0.018) 29.6%,
-          transparent 30.2%,
-          transparent 61%,
-          rgba(70,70,66,0.055) 61.6%,
-          transparent 62.1%,
-          transparent 100%
-        ),
-
-        radial-gradient(
-          ellipse at 34% 28%,
-          rgba(255,255,255,0.070) 0%,
-          rgba(255,255,255,0.028) 18%,
-          transparent 38%
-        ),
-
-        radial-gradient(
-          ellipse at 63% 36%,
-          rgba(255,255,255,0.050) 0%,
-          rgba(255,255,255,0.016) 16%,
-          transparent 34%
-        ),
-
-        radial-gradient(
-          ellipse at 47% 68%,
-          rgba(0,0,0,0.055) 0%,
-          rgba(0,0,0,0.022) 18%,
-          transparent 34%
-        ),
-
-        radial-gradient(
-          ellipse at 72% 74%,
-          rgba(0,0,0,0.045) 0%,
-          rgba(0,0,0,0.016) 14%,
-          transparent 28%
-        ),
-
-        radial-gradient(
-          ellipse at 42% 46%,
-          rgba(255,255,255,0.040) 0%,
-          rgba(255,255,255,0.010) 10%,
-          transparent 24%
-        ),
-
-        radial-gradient(
-          ellipse at 58% 52%,
-          rgba(90,90,86,0.030) 0%,
-          rgba(90,90,86,0.010) 12%,
-          transparent 24%
-        ),
-
-        radial-gradient(
-          circle at 72% 76%,
-          rgba(0,0,0,0.07) 0px,
-          rgba(255,255,255,0.010) 1.4px,
-          transparent 3px
-        ),
-
-        radial-gradient(
-          circle at 28% 62%,
-          rgba(0,0,0,0.05) 0px,
-          rgba(255,255,255,0.008) 1.2px,
-          transparent 2.8px
-        );
-
-      background-blend-mode:
-        normal,
-        normal,
-        normal,
-        screen,
-        screen,
-        multiply,
-        multiply,
-        screen,
-        multiply,
-        normal,
-        normal;
-
-      pointer-events: none;
-      opacity: 0.72;
-      z-index: 1;
-    }
+    pointer-events: none;
+    opacity: 0.72;
+    z-index: 1;
+  }
 
   ha-icon,
   ha-svg-icon {
@@ -561,8 +551,8 @@ styles: |2-
     transition:
       color 0.2s ease,
       fill 0.2s ease,
-      filter 0.24s ease,
-      transform 0.24s cubic-bezier(.2,.8,.2,1);
+      filter 0.20s ease,
+      transform 0.20s cubic-bezier(.2,.8,.2,1);
   }
 
   .route:not(.active) .button ha-icon,
@@ -571,22 +561,22 @@ styles: |2-
     opacity: 0.92;
   }
 
-    .route:not(.active):hover .button:not(.active) {
+  .route:not(.active):hover .button:not(.active) {
     background:
-      radial-gradient(circle at 34% 20%, rgba(255,255,255,1) 0%, rgba(255,255,255,0.56) 16%, transparent 34%),
+      radial-gradient(circle at 34% 24%, rgba(255,255,255,0.34) 0%, rgba(255,255,255,0.08) 16%, transparent 34%),
       linear-gradient(
         to bottom,
-        rgba(250,250,246,1) 0%,
-        rgba(230,230,224,0.96) 18%,
-        rgba(188,188,182,0.94) 52%,
-        rgba(122,122,117,0.84) 100%
+        rgba(188,188,184,0.96) 0%,
+        rgba(158,158,153,0.94) 24%,
+        rgba(116,116,112,0.92) 58%,
+        rgba(66,66,63,0.90) 100%
       ),
       repeating-linear-gradient(
         90deg,
-        rgba(255,255,255,0.04) 0px,
-        rgba(255,255,255,0.04) 2px,
-        rgba(0,0,0,0.014) 2px,
-        rgba(0,0,0,0.014) 4px
+        rgba(255,255,255,0.012) 0px,
+        rgba(255,255,255,0.012) 2px,
+        rgba(0,0,0,0.018) 2px,
+        rgba(0,0,0,0.018) 4px
       ) !important;
 
     color: var(--nav-hover-color) !important;
@@ -596,15 +586,28 @@ styles: |2-
     --iron-icon-fill-color: var(--nav-hover-color) !important;
     --mdc-icon-color: var(--nav-hover-color) !important;
 
-    transform: translateY(-2px) scale(1.02);
+    transform: translateY(3px) scale(0.94) !important;
 
     box-shadow:
-      0 10px 16px rgba(0,0,0,0.26),
-      0 3px 6px rgba(0,0,0,0.18),
-      inset 0 2px 3px rgba(255,255,255,0.88),
-      inset 0 -8px 12px rgba(0,0,0,0.18),
-      inset 4px 0 6px rgba(255,255,255,0.12),
-      inset -4px 0 6px rgba(0,0,0,0.08) !important;
+      0 2px 3px rgba(0,0,0,0.18),
+      inset 0 5px 9px rgba(0,0,0,0.42),
+      inset 0 -3px 5px rgba(255,255,255,0.08),
+      inset 0 0 0 1px rgba(0,0,0,0.42),
+      inset 0 0 0 2px rgba(255,255,255,0.025),
+      inset 4px 0 6px rgba(0,0,0,0.10),
+      inset -4px 0 6px rgba(0,0,0,0.16) !important;
+  }
+
+  .route:not(.active):hover .button:not(.active) ha-icon,
+  .route:not(.active):hover .button:not(.active) ha-svg-icon {
+    transform: translateY(2px) scale(0.92) !important;
+    color: var(--nav-hover-color) !important;
+    fill: var(--nav-hover-color) !important;
+
+    filter:
+      drop-shadow(0 -1px 0 rgba(0,0,0,0.62))
+      drop-shadow(0 1px 0 rgba(255,255,255,0.42))
+      drop-shadow(0 1px 1px rgba(0,0,0,0.36)) !important;
   }
 
   .route.active {
@@ -615,6 +618,7 @@ styles: |2-
   .route.active .button,
   .route .button.active {
     background:
+      radial-gradient(circle at 50% 38%, rgba(255,245,190,0.30) 0%, rgba(255,110,110,0.22) 16%, rgba(255,20,20,0.10) 30%, transparent 48%),
       radial-gradient(circle at 34% 20%, rgba(255,165,165,1), rgba(225,42,42,0.98) 34%, rgba(158,14,14,1) 68%, rgba(72,0,0,0.98) 100%) !important;
 
     color: var(--nav-active-icon-color) !important;
@@ -627,7 +631,6 @@ styles: |2-
     --mdc-icon-color: var(--nav-active-icon-color) !important;
 
     transform: translateY(1px) scale(0.995) !important;
-
     border: none !important;
 
     box-shadow:
@@ -635,9 +638,12 @@ styles: |2-
       inset 0 3px 6px rgba(255,255,255,0.16),
       inset 0 -9px 13px rgba(45,0,0,0.42),
       inset 5px 0 8px rgba(255,255,255,0.08),
-      inset -5px 0 8px rgba(25,0,0,0.28) !important;
+      inset -5px 0 8px rgba(25,0,0,0.28),
       inset 0 0 0 1px rgba(95,0,0,0.20),
       inset 0 0 0 2px rgba(255,255,255,0.03),
+      0 0 10px rgba(255,40,40,0.18) !important;
+
+    animation: activeLampPulse 2.4s ease-in-out infinite;
   }
 
   .route.active .button::before,
@@ -669,21 +675,49 @@ styles: |2-
     filter:
       drop-shadow(0 -1px 0 rgba(50,0,0,0.58))
       drop-shadow(0 1px 0 rgba(255,255,255,0.62))
+      drop-shadow(0 0 4px rgba(255,210,210,0.35))
+      drop-shadow(0 0 8px rgba(255,70,70,0.42))
+      drop-shadow(0 0 14px rgba(255,0,0,0.20))
       drop-shadow(0 3px 3px rgba(40,0,0,0.44));
+
+    animation: activeIconLampPulse 2.4s ease-in-out infinite;
   }
 
   .route.active:hover .button,
   .route:hover .button.active {
-    transform: translateY(0) scale(1.01) !important;
+    animation: none !important;
+    transform: translateY(3px) scale(0.95) !important;
 
     background:
-      radial-gradient(circle at 34% 20%, rgba(255,200,200,1), rgba(250,72,72,1) 33%, rgba(180,18,18,1) 68%, rgba(82,0,0,0.98) 100%) !important;
+      radial-gradient(circle at 34% 24%, rgba(255,145,145,0.92), rgba(205,28,28,0.98) 34%, rgba(126,8,8,1) 68%, rgba(42,0,0,0.98) 100%) !important;
+
+    box-shadow:
+      0 2px 4px rgba(0,0,0,0.30),
+      inset 0 5px 9px rgba(45,0,0,0.48),
+      inset 0 -4px 6px rgba(255,255,255,0.08),
+      inset 0 0 0 1px rgba(70,0,0,0.45),
+      inset 0 0 0 2px rgba(255,255,255,0.025) !important;
   }
 
-        .navbar-popup {
-    width: 260px !important;
-    min-width: 260px !important;
-    max-width: 260px !important;
+  .route .button:active {
+    transform: translateY(5px) scale(0.91) !important;
+
+    box-shadow:
+      0 1px 2px rgba(0,0,0,0.18),
+      inset 0 7px 12px rgba(0,0,0,0.55),
+      inset 0 -2px 4px rgba(255,255,255,0.06),
+      inset 0 0 0 1px rgba(0,0,0,0.52) !important;
+  }
+
+  .route .button:active ha-icon,
+  .route .button:active ha-svg-icon {
+    transform: translateY(3px) scale(0.88) !important;
+  }
+
+  .navbar-popup {
+    width: 235px !important;
+    min-width: 235px !important;
+    max-width: 235px !important;
 
     background: transparent !important;
     box-shadow: none !important;
@@ -718,13 +752,12 @@ styles: |2-
     transform-origin: top left !important;
   }
 
-  /* Nur rechts/label-left geankerte Popups als Ganzes nach rechts schieben */
   .navbar-popup.label-left.open-up {
-    transform: translate(190px, -100%) !important;
+    transform: translate(145px, -100%) !important;
   }
 
   .navbar-popup.label-left.open-down {
-    transform: translate(105px, 0) !important;
+    transform: translate(75px, 0) !important;
   }
 
   .navbar-popup .popup-item,
@@ -743,20 +776,21 @@ styles: |2-
     translate: none !important;
 
     display: grid !important;
-    grid-template-columns: 48px max-content !important;
-    column-gap: 14px !important;
+    grid-template-columns: 52px 145px !important;
+    column-gap: 10px !important;
 
     align-items: center !important;
     justify-content: start !important;
 
-    width: max-content !important;
-    min-width: 0 !important;
-    max-width: none !important;
+    width: 210px !important;
+    min-width: 210px !important;
+    max-width: 210px !important;
+    height: 44px !important;
 
     box-sizing: border-box !important;
 
-    padding: 3px 8px !important;
-    margin: 5px 0 !important;
+    padding: 0 !important;
+    margin: 8px 0 !important;
 
     background: transparent !important;
     border: none !important;
@@ -765,71 +799,154 @@ styles: |2-
     overflow: visible !important;
   }
 
+  .navbar-popup .popup-item::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+
+    width: 52px;
+    height: 44px;
+
+    transform: translateY(-50%);
+    border-radius: 14px;
+
+    background:
+      linear-gradient(
+        to bottom,
+        rgba(8,8,7,0.82) 0%,
+        rgba(22,22,20,0.74) 34%,
+        rgba(60,60,56,0.28) 56%,
+        rgba(8,8,7,0.78) 100%
+      );
+
+    box-shadow:
+      inset 0 5px 9px rgba(0,0,0,0.72),
+      inset 0 -2px 4px rgba(255,255,255,0.055),
+      inset 0 0 0 1px rgba(0,0,0,0.58),
+      inset 0 0 0 2px rgba(255,255,255,0.025),
+      0 4px 7px rgba(0,0,0,0.24);
+
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  .navbar-popup .popup-item::after {
+    content: "";
+    position: absolute;
+    left: 52px;
+    top: 50%;
+
+    width: 148px;
+    height: 28px;
+
+    transform: translateY(-50%);
+    border-radius: 0 12px 12px 0;
+
+    background:
+      linear-gradient(
+        to right,
+        rgba(255,255,255,0.050) 0%,
+        rgba(255,255,255,0.020) 22%,
+        rgba(0,0,0,0.035) 100%
+      );
+
+    border-top: 1px solid rgba(255,255,255,0.055);
+    border-bottom: 1px solid rgba(0,0,0,0.22);
+
+    box-shadow:
+      inset 0 1px 1px rgba(255,255,255,0.030),
+      inset 0 -3px 5px rgba(0,0,0,0.10);
+
+    pointer-events: none;
+    z-index: 0;
+    opacity: 0.42;
+  }
+
   .navbar-popup .popup-item .button,
   .navbar-popup .popup-item.label-right .button,
   .navbar-popup .popup-item.label-left .button {
     grid-column: 1 !important;
 
-    width: 48px !important;
-    height: 48px !important;
-    min-width: 48px !important;
-    min-height: 48px !important;
-    max-width: 48px !important;
-    max-height: 48px !important;
-    aspect-ratio: 1 / 1 !important;
+    width: 38px !important;
+    height: 30px !important;
+    min-width: 38px !important;
+    min-height: 30px !important;
+    max-width: 38px !important;
+    max-height: 30px !important;
 
-    margin: 0 !important;
+    margin: 0 0 0 7px !important;
     padding: 0 !important;
 
     flex: none !important;
 
-    border-radius: 16px !important;
+    border-radius: 10px !important;
 
     display: flex !important;
     align-items: center !important;
     justify-content: center !important;
 
     position: relative !important;
-    overflow: hidden !important;
+    overflow: visible !important;
+    z-index: 2;
 
     background:
-      radial-gradient(circle at 35% 20%, rgba(255,255,255,0.96), rgba(244,244,240,0.82) 24%, rgba(177,177,170,0.92) 62%, rgba(92,92,88,0.74) 100%) !important;
+      radial-gradient(circle at 34% 18%, rgba(255,255,255,0.38) 0%, rgba(255,255,255,0.08) 18%, transparent 38%),
+      linear-gradient(
+        to bottom,
+        rgba(214,214,209,0.98) 0%,
+        rgba(184,184,178,0.94) 24%,
+        rgba(126,126,121,0.92) 58%,
+        rgba(58,58,55,0.90) 100%
+      ),
+      repeating-linear-gradient(
+        90deg,
+        rgba(255,255,255,0.012) 0px,
+        rgba(255,255,255,0.012) 2px,
+        rgba(0,0,0,0.014) 2px,
+        rgba(0,0,0,0.014) 4px
+      ) !important;
 
-    border-top: 1px solid rgba(255,255,255,0.92) !important;
-    border-left: 1px solid rgba(255,255,255,0.54) !important;
-    border-right: 1px solid rgba(0,0,0,0.18) !important;
-    border-bottom: 1px solid rgba(0,0,0,0.36) !important;
+    border: none !important;
 
     box-shadow:
-      0 7px 11px rgba(0,0,0,0.24),
-      0 2px 4px rgba(0,0,0,0.16),
-      inset 0 2px 2px rgba(255,255,255,0.94),
-      inset 0 -7px 10px rgba(0,0,0,0.24),
-      inset 4px 0 7px rgba(255,255,255,0.16),
-      inset -4px 0 7px rgba(0,0,0,0.13) !important;
+      0 4px 7px rgba(0,0,0,0.26),
+      0 1px 2px rgba(0,0,0,0.16),
+      inset 0 1px 1px rgba(255,255,255,0.24),
+      inset 0 -6px 9px rgba(0,0,0,0.28),
+      inset 0 0 0 1px rgba(54,54,50,0.24),
+      inset 0 0 0 2px rgba(255,255,255,0.022),
+      inset 3px 0 5px rgba(255,255,255,0.018),
+      inset -3px 0 5px rgba(0,0,0,0.13) !important;
 
-    transform: none !important;
+    transform: translateY(0) scale(1) !important;
 
     transition:
-      transform 0.24s cubic-bezier(.2,.8,.2,1),
-      box-shadow 0.24s cubic-bezier(.2,.8,.2,1),
-      background 0.24s cubic-bezier(.2,.8,.2,1);
+      transform 0.16s cubic-bezier(.2,.8,.2,1),
+      box-shadow 0.16s cubic-bezier(.2,.8,.2,1),
+      background 0.16s cubic-bezier(.2,.8,.2,1),
+      filter 0.16s ease;
   }
 
   .navbar-popup .popup-item .button::before {
     content: "";
     position: absolute;
     top: 4px;
-    left: 6px;
-    right: 6px;
-    height: 34%;
-    border-radius: 11px;
+    left: 7px;
+    right: 7px;
+    height: 18%;
+    border-radius: 999px;
 
     background:
-      linear-gradient(to bottom, rgba(255,255,255,0.76), rgba(255,255,255,0.10));
+      linear-gradient(
+        to bottom,
+        rgba(255,255,255,0.16) 0%,
+        rgba(255,255,255,0.045) 64%,
+        rgba(255,255,255,0.00) 100%
+      );
 
     pointer-events: none;
-    opacity: 0.86;
+    opacity: 0.42;
     z-index: 1;
   }
 
@@ -837,77 +954,50 @@ styles: |2-
     content: "";
     position: absolute;
     inset: 0;
-    border-radius: 14px;
+    border-radius: 10px;
 
     background:
-      linear-gradient(145deg, rgba(255,255,255,0.16), transparent 34%, rgba(0,0,0,0.16));
+      linear-gradient(
+        145deg,
+        rgba(255,255,255,0.024),
+        transparent 34%,
+        rgba(0,0,0,0.13)
+      ),
+      repeating-linear-gradient(
+        113deg,
+        rgba(255,255,255,0.00) 0px,
+        rgba(255,255,255,0.00) 10px,
+        rgba(255,255,255,0.016) 11px,
+        rgba(255,255,255,0.00) 12px,
+        rgba(255,255,255,0.00) 19px
+      );
 
     pointer-events: none;
+    opacity: 0.58;
     z-index: 1;
-  }
-
-  .navbar-popup .popup-item:hover .button {
-    background:
-      radial-gradient(circle at 34% 20%, rgba(255,165,165,1), rgba(225,42,42,0.98) 34%, rgba(158,14,14,1) 68%, rgba(72,0,0,0.98) 100%) !important;
-
-    transform: translateY(-2px) scale(1.04) !important;
-
-    border-top: 1px solid rgba(255,255,255,0.50) !important;
-    border-left: 1px solid rgba(255,255,255,0.24) !important;
-    border-right: 1px solid rgba(60,0,0,0.42) !important;
-    border-bottom: 1px solid rgba(25,0,0,0.68) !important;
-
-    box-shadow:
-      0 9px 15px rgba(0,0,0,0.34),
-      0 3px 6px rgba(0,0,0,0.22),
-      inset 0 3px 6px rgba(255,255,255,0.16),
-      inset 0 -8px 12px rgba(45,0,0,0.42),
-      inset 4px 0 7px rgba(255,255,255,0.08),
-      inset -4px 0 7px rgba(25,0,0,0.28) !important;
-  }
-
-  .navbar-popup .popup-item:hover .button::before {
-    background:
-      linear-gradient(to bottom, rgba(255,255,255,0.48), rgba(255,255,255,0.04));
-    opacity: 0.68;
-  }
-
-  .navbar-popup .popup-item:hover .button::after {
-    background:
-      linear-gradient(145deg, rgba(255,255,255,0.12), transparent 34%, rgba(55,0,0,0.26));
   }
 
   .navbar-popup .popup-item .button ha-icon,
   .navbar-popup .popup-item .button ha-svg-icon,
   .navbar-popup .popup-item .button .icon {
-    --mdc-icon-size: 22px !important;
+    --mdc-icon-size: 19px !important;
 
-    color: rgba(255,255,255,0.94) !important;
-    fill: rgba(255,255,255,0.94) !important;
-    --icon-primary-color: rgba(255,255,255,0.94) !important;
+    color: rgba(255,255,255,0.92) !important;
+    fill: rgba(255,255,255,0.92) !important;
+    --icon-primary-color: rgba(255,255,255,0.92) !important;
 
-    transform: translateY(1px) scale(0.98) !important;
+    transform: translateY(1px) scale(0.95) !important;
     z-index: 3;
 
     filter:
-      drop-shadow(0 -1px 0 rgba(0,0,0,0.48))
-      drop-shadow(0 1px 0 rgba(255,255,255,0.78))
-      drop-shadow(0 2px 2px rgba(0,0,0,0.34)) !important;
-  }
+      drop-shadow(0 -1px 0 rgba(0,0,0,0.52))
+      drop-shadow(0 1px 0 rgba(255,255,255,0.48))
+      drop-shadow(0 2px 2px rgba(0,0,0,0.30)) !important;
 
-  .navbar-popup .popup-item:hover .button ha-icon,
-  .navbar-popup .popup-item:hover .button ha-svg-icon,
-  .navbar-popup .popup-item:hover .button .icon {
-    color: #fff7f7 !important;
-    fill: #fff7f7 !important;
-    --icon-primary-color: #fff7f7 !important;
-
-    transform: translateY(0) scale(1.05) !important;
-
-    filter:
-      drop-shadow(0 -1px 0 rgba(50,0,0,0.58))
-      drop-shadow(0 1px 0 rgba(255,255,255,0.62))
-      drop-shadow(0 3px 3px rgba(40,0,0,0.44)) !important;
+    transition:
+      transform 0.16s cubic-bezier(.2,.8,.2,1),
+      filter 0.16s ease,
+      color 0.16s ease;
   }
 
   .navbar-popup .popup-item .label,
@@ -926,30 +1016,79 @@ styles: |2-
     translate: none !important;
 
     margin: 0 !important;
-    padding: 0 !important;
+    padding: 0 4px 0 0 !important;
 
-    width: auto !important;
-    min-width: 0 !important;
-    max-width: none !important;
+    width: 145px !important;
+    min-width: 145px !important;
+    max-width: 145px !important;
 
     flex: none !important;
 
     color: rgba(255,255,255,0.96) !important;
-    font-size: 0.88rem !important;
-    font-weight: 700 !important;
+    font-size: 0.82rem !important;
+    font-weight: 800 !important;
     letter-spacing: 0.01em;
 
     text-align: left !important;
     white-space: nowrap !important;
 
     text-shadow:
-      0 1px 2px rgba(0,0,0,0.75),
-      0 -1px 0 rgba(255,255,255,0.10);
+      0 1px 2px rgba(0,0,0,0.92),
+      0 -1px 0 rgba(255,255,255,0.06);
 
     opacity: 1 !important;
+    z-index: 2;
   }
 
-      .badge {
+  .navbar-popup .popup-item:hover::after {
+    opacity: 0.26;
+  }
+
+  .navbar-popup .popup-item:hover .button {
+    background:
+      radial-gradient(circle at 34% 24%, rgba(255,145,145,0.30) 0%, rgba(255,55,55,0.14) 20%, transparent 42%),
+      linear-gradient(
+        to bottom,
+        rgba(150,32,32,0.98) 0%,
+        rgba(108,14,14,0.98) 42%,
+        rgba(54,4,4,0.98) 100%
+      ),
+      repeating-linear-gradient(
+        90deg,
+        rgba(255,255,255,0.010) 0px,
+        rgba(255,255,255,0.010) 2px,
+        rgba(0,0,0,0.018) 2px,
+        rgba(0,0,0,0.018) 4px
+      ) !important;
+
+    transform: translateY(2px) scale(0.92) !important;
+
+    box-shadow:
+      0 1px 2px rgba(0,0,0,0.24),
+      inset 0 5px 8px rgba(45,0,0,0.52),
+      inset 0 -2px 4px rgba(255,255,255,0.065),
+      inset 0 0 0 1px rgba(55,0,0,0.48),
+      inset 0 0 0 2px rgba(255,255,255,0.018),
+      inset 3px 0 5px rgba(0,0,0,0.12),
+      inset -3px 0 5px rgba(0,0,0,0.18) !important;
+  }
+
+  .navbar-popup .popup-item:hover .button ha-icon,
+  .navbar-popup .popup-item:hover .button ha-svg-icon,
+  .navbar-popup .popup-item:hover .button .icon {
+    color: #fff7f7 !important;
+    fill: #fff7f7 !important;
+    --icon-primary-color: #fff7f7 !important;
+
+    transform: translateY(2px) scale(0.84) !important;
+
+    filter:
+      drop-shadow(0 -1px 0 rgba(50,0,0,0.60))
+      drop-shadow(0 1px 0 rgba(255,255,255,0.28))
+      drop-shadow(0 1px 1px rgba(40,0,0,0.38)) !important;
+  }
+
+  .badge {
     position: absolute !important;
     top: -17px !important;
     right: -16px !important;
@@ -1069,7 +1208,55 @@ styles: |2-
       transform: translateY(0) rotate(0deg) scale(1);
     }
   }
-      ha-card::before,
+
+  @keyframes activeLampPulse {
+    0%, 100% {
+      box-shadow:
+        0 5px 9px rgba(0,0,0,0.32),
+        inset 0 3px 6px rgba(255,255,255,0.16),
+        inset 0 -9px 13px rgba(45,0,0,0.42),
+        inset 5px 0 8px rgba(255,255,255,0.08),
+        inset -5px 0 8px rgba(25,0,0,0.28),
+        inset 0 0 0 1px rgba(95,0,0,0.20),
+        inset 0 0 0 2px rgba(255,255,255,0.03),
+        0 0 8px rgba(255,40,40,0.14);
+    }
+    50% {
+      box-shadow:
+        0 5px 9px rgba(0,0,0,0.32),
+        inset 0 3px 6px rgba(255,255,255,0.20),
+        inset 0 -9px 13px rgba(45,0,0,0.42),
+        inset 5px 0 8px rgba(255,255,255,0.10),
+        inset -5px 0 8px rgba(25,0,0,0.28),
+        inset 0 0 0 1px rgba(120,0,0,0.28),
+        inset 0 0 0 2px rgba(255,255,255,0.04),
+        0 0 14px rgba(255,50,50,0.24),
+        0 0 24px rgba(255,0,0,0.16);
+    }
+  }
+
+  @keyframes activeIconLampPulse {
+    0%, 100% {
+      filter:
+        drop-shadow(0 -1px 0 rgba(50,0,0,0.58))
+        drop-shadow(0 1px 0 rgba(255,255,255,0.62))
+        drop-shadow(0 0 4px rgba(255,210,210,0.30))
+        drop-shadow(0 0 8px rgba(255,70,70,0.32))
+        drop-shadow(0 0 14px rgba(255,0,0,0.14))
+        drop-shadow(0 3px 3px rgba(40,0,0,0.44));
+    }
+    50% {
+      filter:
+        drop-shadow(0 -1px 0 rgba(50,0,0,0.58))
+        drop-shadow(0 1px 0 rgba(255,255,255,0.62))
+        drop-shadow(0 0 6px rgba(255,235,235,0.42))
+        drop-shadow(0 0 12px rgba(255,85,85,0.50))
+        drop-shadow(0 0 20px rgba(255,0,0,0.26))
+        drop-shadow(0 3px 3px rgba(40,0,0,0.44));
+    }
+  }
+
+  ha-card::before,
   ha-card::after {
     content: "";
     position: absolute;
@@ -1098,27 +1285,16 @@ styles: |2-
   }
 
   ha-card::before {
-    left: 5px;
+    left: 0px;
     top: 49%;
     transform: translateY(-50%) rotate(-22deg);
   }
 
   ha-card::after {
-    right: 5px;
+    right: 0px;
     top: 51%;
     transform: translateY(-50%) rotate(31deg);
   }
-      ha-card::before {
-      left: 5px;
-      top: 49%;
-      transform: translateY(-50%) rotate(-22deg);
-    }
-
-    ha-card::after {
-      right: 5px;
-      top: 51%;
-      transform: translateY(-50%) rotate(31deg);
-    }
 desktop:
   show_labels: popup_only
   show_popup_label_backgrounds: false
